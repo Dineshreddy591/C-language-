@@ -1,0 +1,22 @@
+#include<stdio.h>
+int sq(int c)
+{
+    return c*c;
+}
+void sum(int (*sq) (int),int num1)
+{
+    int total=0;
+    for(int i=0;i<=num1;i++)
+    {
+        total=total+(*sq)(i);
+    }
+    printf("%d",total);
+}
+int main()
+{
+    int n;
+    printf("Enter any number");
+    scanf("%d",&n);
+    sum(sq,n);
+    return 0;
+}
